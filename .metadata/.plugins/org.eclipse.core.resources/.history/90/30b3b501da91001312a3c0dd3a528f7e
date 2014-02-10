@@ -1,0 +1,12 @@
+package services;
+
+import javax.jws.WebService;
+
+/**
+ * Created by wadi chemkhi on 08/02/14.
+ * Email : wadi.chemkhi@gmail.com
+ */
+@WebService
+public interface SubstractingService {
+    Integer substract(Integer a, Integer b);
+}

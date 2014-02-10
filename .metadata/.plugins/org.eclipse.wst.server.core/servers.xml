@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server hostname="localhost" id="Ode v1.x Server at localhost" name="Ode v1.x Server at localhost" runtime-id="Apache Ode 1.x Runtime" server-type="org.eclipse.jst.server.generic.apache.ode.1x" server-type-id="org.eclipse.jst.server.generic.apache.ode.1x" start-timeout="480" stop-timeout="60" timestamp="8">
+    <list key="Generic_Server_Modules_List" value0="org.eclipse.bpel.runtimes.module.moduleFactory:ProcessOrchestration"/>
+    <map key="generic_server_instance_properties"/>
+    <list key="modules" value0="ProcessOrchestration::org.eclipse.bpel.runtimes.module.moduleFactory:ProcessOrchestration::bpel.module::2.0"/>
+  </server>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Tomcat v7.0 Server at localhost-config" deployDir="wtpwebapps" hostname="localhost" id="Tomcat v7.0 Server at localhost" name="Tomcat v7.0 Server at localhost" runtime-id="Apache Tomcat v7.0" server-type="org.eclipse.jst.server.tomcat.70" server-type-id="org.eclipse.jst.server.tomcat.70" start-timeout="45" stop-timeout="15" testEnvironment="true" timestamp="5">
+    <list key="modules" value0="services::org.eclipse.jst.jee.server:services::jst.web::3.0"/>
+  </server>
+</servers>

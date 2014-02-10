@@ -1,0 +1,21 @@
+package services.impl;
+
+import services.AddingService;
+
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebService;
+
+/**
+ * Created by wadi chemkhi on 08/02/14.
+ * Email : wadi.chemkhi@gmail.com
+ */
+@WebService(endpointInterface = "services.AddingService")
+public class AddingServiceImpl implements AddingService {
+
+    @Override
+    @WebMethod
+    public Integer add(@WebParam Integer a, @WebParam Integer b) {
+        return a+b;
+    }
+}

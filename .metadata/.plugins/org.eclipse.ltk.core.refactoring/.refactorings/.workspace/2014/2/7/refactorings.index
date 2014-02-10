@@ -1,0 +1,5 @@
+1391995109342	Delete resource 'InvoqueWsProcess/bpelContent/invoqueAddWsProcess.bpel'
+1391995121635	Delete resource 'InvoqueWsProcess/bpelContent/invoqueAddWsProcessArtifacts.wsdl'
+1391995124696	Delete resource 'InvoqueWsProcess/bpelContent/deploy.xml'
+1391995128430	Delete resource 'InvoqueWsProcess/bpelContent/invoqueAddWsProcess.bpelex'
+1392000051256	Rename resource 'InvoqueWsProcess'

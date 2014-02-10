@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://services/" name="SubstractingService" targetNamespace="http://services/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services/" elementFormDefault="unqualified" targetNamespace="http://services/" version="1.0">
+
+  <xs:element name="substract" type="tns:substract"/>
+
+  <xs:element name="substractResponse" type="tns:substractResponse"/>
+
+  <xs:complexType name="substract">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:int"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="substractResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="substractResponse">
+    <wsdl:part element="ns1:substractResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="substract">
+    <wsdl:part element="ns1:substract" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="SubstractingService">
+    <wsdl:operation name="substract">
+      <wsdl:input message="ns1:substract" name="substract">
+    </wsdl:input>
+      <wsdl:output message="ns1:substractResponse" name="substractResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

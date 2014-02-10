@@ -1,0 +1,45 @@
+package configurations;
+
+/**
+ * Created by wadi chemkhi on 14/01/14.
+ * Email : wadi.chemkhi@gmail.com
+ */
+import org.apache.cxf.Bus;
+import  org.apache.cxf.jaxws.EndpointImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.ImportResource;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
+import services.SubstractionService;
+import services.impl.AdditionServiceImpl;
+import services.impl.SubstractingServiceImpl;
+
+
+@Configuration
+@ImportResource({ "classpath:META-INF/cxf/cxf.xml" })
+public class WebConfiguration extends WebMvcConfigurationSupport {
+
+    @Autowired
+    Bus cxfBus;
+
+    @Bean
+    public EndpointImpl adder() {
+        AdditionServiceImpl implementor = new AdditionServiceImpl();
+
+        EndpointImpl endpoint = new EndpointImpl(cxfBus,implementor);
+        endpoint.setAddress("/add");
+        endpoint.publish();
+        return endpoint;
+    }
+    @Bean
+    public EndpointImpl substracter() {
+        SubstractionService implementor = new SubstractingServiceImpl();
+            EndpointImpl endpoint = new EndpointImpl(cxfBus,implementor);
+        endpoint.setAddress("/substract");
+        endpoint.publish();
+        return endpoint;
+    }
+
+
+}

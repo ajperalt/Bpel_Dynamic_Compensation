@@ -1,0 +1,14 @@
+package services;
+
+import javax.jws.WebService;
+import javax.xml.ws.RequestWrapper;
+
+/**
+ * Created by wadi chemkhi on 08/02/14.
+ * Email : wadi.chemkhi@gmail.com
+ */
+@WebService
+public interface SubstractingService {
+	@RequestWrapper(localName = "substractRequest")
+    Integer substract(Integer a, Integer b);
+}

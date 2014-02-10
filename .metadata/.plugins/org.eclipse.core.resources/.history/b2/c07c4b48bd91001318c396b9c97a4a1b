@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:invoque-add-ws="http://ppp.gl4.insat.tn/invoque-add-ws">
+  <process name="invoque-add-ws:invoqueAddWsProcess">
+    <active>true</active>
+    <retired>false</retired>
+  </process>
+</deploy>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:impl.services="http://impl.services/" xmlns:orchestration-process="http://ppp.gl4.insat.tn/sevices/orchestration-process">
+  <process name="orchestration-process:OrchestrationProcess">
+    <active>true</active>
+    <retired>false</retired>
+    <process-events generate="all"/>
+    <provide partnerLink="client">
+      <service name="orchestration-process:OrchestrationProcessService" port="OrchestrationProcessPort"/>
+    </provide>
+    <invoke partnerLink="add">
+      <service name="impl.services:AdditionServiceImplService" port="AdditionServiceImplPort"/>
+    </invoke>
+    <invoke partnerLink="substract">
+      <service name="impl.services:SubstractionServiceImplService" port="SubstractionServiceImplPort"/>
+    </invoke>
+  </process>
+</deploy>

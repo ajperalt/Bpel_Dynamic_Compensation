@@ -1,0 +1,14 @@
+package services;
+
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+
+/**
+ * Created by wadi chemkhi on 08/02/14.
+ * Email : wadi.chemkhi@gmail.com
+ */
+@WebService
+public interface AddingService {
+	@WebMethod
+    Integer add(Integer a,Integer b);
+}

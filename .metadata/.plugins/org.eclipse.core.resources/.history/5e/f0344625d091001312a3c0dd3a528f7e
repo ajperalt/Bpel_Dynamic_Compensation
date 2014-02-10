@@ -1,0 +1,18 @@
+package services.impl;
+
+/**
+ * Created by wadi chemkhi on 08/02/14.
+ * Email : wadi.chemkhi@gmail.com
+ */
+import services.HelloWorld;
+
+import javax.jws.WebService;
+
+@WebService(endpointInterface = "services.HelloWorld")
+public class HelloWorldImpl implements HelloWorld {
+
+    public String sayHi(String text) {
+        System.out.println("sayHi called");
+        return "Hello " + text;
+    }
+}

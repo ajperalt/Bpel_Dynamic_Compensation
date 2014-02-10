@@ -1,0 +1,22 @@
+package services.impl;
+
+import services.AddingService;
+import services.SubstractingService;
+
+import javax.jws.WebMethod;
+import javax.jws.WebParam;
+import javax.jws.WebService;
+
+/**
+ * Created by wadi chemkhi on 08/02/14.
+ * Email : wadi.chemkhi@gmail.com
+ */
+@WebService(endpointInterface = "services.SubstractingService")
+public class SubstractingServiceImpl implements SubstractingService {
+
+    @Override
+    @WebMethod
+    public Integer substract(@WebParam Integer a, @WebParam Integer b) {
+        return a+b;
+    }
+}

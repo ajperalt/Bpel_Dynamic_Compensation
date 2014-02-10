@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://impl.services/"
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http"
+	xmlns:ns1="http://ppp.gl4.insat.tn/sevices/addition-service" name="AdditionServiceImplService"
+	targetNamespace="http://impl.services/">
+	<wsdl:import
+		location="AdditionService.wsdl"
+		namespace="http://ppp.gl4.insat.tn/sevices/addition-service"></wsdl:import>
+	<wsdl:binding name="AdditionServiceImplServiceSoapBinding"
+		type="ns1:AdditionService">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="add">
+			<soap:operation soapAction="" style="document" />
+			<wsdl:input name="add">
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output name="addResponse">
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="AdditionServiceImplService">
+		<wsdl:port binding="tns:AdditionServiceImplServiceSoapBinding"
+			name="AdditionServiceImplPort">
+			<soap:address location="http://localhost:8081/services/add" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

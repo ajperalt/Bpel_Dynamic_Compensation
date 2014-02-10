@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:echo="http://ppp.gl4.insat.tn/echo">
+  <process name="echo:echoProcess">
+    <active>true</active>
+    <retired>false</retired>
+    <process-events generate="all"/>
+    <provide partnerLink="client">
+      <service name="echo:echoProcessService" port="echoProcessPort"/>
+    </provide>
+  </process>
+</deploy>
